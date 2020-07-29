@@ -1,0 +1,25 @@
+#List of species to include (eg O3,NO2,PM2p5,PM10)
+short_name_list      = ["O3","PM2p5"] 
+
+#List of statistics netcdf files.
+rolling_stats_file_list = ["SAMPLE_DATADIR/stats_cube_list/stats_Obs-AURN_Mod-aqum_oper.nc"]
+
+#Output directory for plots
+plot_dir             = "$DATADIR/AQUM/verification/python/plots"
+
+#--------------
+# Other options
+
+#List of statistics to plot as a timeseries (see timeseries_stats.STATS_INFO for full list)
+timeseries_of_stats_list = ['bias','rmse']
+#List of stats output file formats
+# Available formats: 'csv', 'wiki', 'html', 'tex'
+calc_stats_format_list = ['csv']
+
+#--------------
+# What to produce
+
+timeseries_of_stats  = True
+calc_stats = True
+#Also calculate monthly mean versions of the above outputs
+monthly_stats = True

@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Test Webpage</title>
+</head>
+<body>
+
+
+<h1>Example Webpage</h1>
+
+
+<h2>Example text file</h2>
+<iframe width=800 height=100 src="sites_file.txt"></iframe>
+
+<h2>Example single plot</h2>
+<a href="Harwell_O3.png"><img width=200 src="Harwell_O3.png"> </a>
+
+<h2>Example plots table</h2>
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td><a href="adaq_plotting/gridded_fields//Fieldplot_aqum_oper_O3_201404020000_basicAQ.png"><img width=30% src="adaq_plotting/gridded_fields//Fieldplot_aqum_oper_O3_201404020000_basicAQ.png"> </a></td>
+<td><a href="adaq_plotting/gridded_fields//Fieldplot_aqum_oper_O3_201404020000_fullAQ.png"><img width=30% src="adaq_plotting/gridded_fields//Fieldplot_aqum_oper_O3_201404020000_fullAQ.png"> </a></td>
+</tr>
+<tr>
+<td><a href="adaq_plotting/gridded_fields//Fieldplot_aqum_oper_O3_201404020000_basicNAME.png"><img width=30% src="adaq_plotting/gridded_fields//Fieldplot_aqum_oper_O3_201404020000_basicNAME.png"> </a></td>
+</tr>
+</table>
+
+<p><hr><p>
+<br><I>Modified:</I> <B><!--#config timefmt="%d %b %Y"--><!--#echo var="LAST_MODIFIED"--> </B>
+<p><hr><p>
+<address>
+Telephone: xxxx<br></address>
+</body>
+</html>

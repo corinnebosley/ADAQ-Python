@@ -1,0 +1,70 @@
+=== Statistics for Tue 25-Mar-2014 23:00 - Thu 27-Mar-2014 00:00 ===
+||  ||= '''model1''' =||= '''model2''' =||
+||||||= '''O3''' =||
+||=Number of sites                                =||                                   None||                                   None||
+||=Number of points                               =|| [[span(style=color: green,        5)]]|| [[span(style=color: red  ,        4)]]||
+||=Correlation                                    =|| [[span(style=color: green,    -0.21)]]|| [[span(style=color: red  ,    -0.62)]]||
+||=Bias (ug/m3)                                   =|| [[span(style=color: green,    -1.31)]]|| [[span(style=color: red  ,     1.98)]]||
+||=Normalised Mean Bias                           =|| [[span(style=color: green,    -0.01)]]|| [[span(style=color: red  ,     0.02)]]||
+||=Modified Normalised Mean Bias                  =|| [[span(style=color: green,-8.47e-03)]]|| [[span(style=color: red  ,     0.02)]]||
+||=Normalised Mean Gross Error                    =|| [[span(style=color: red  ,     0.23)]]|| [[span(style=color: green,     0.20)]]||
+||=Fractional Gross Error                         =|| [[span(style=color: red  ,     0.22)]]|| [[span(style=color: green,     0.19)]]||
+||=Root Mean Square Error (ug/m3)                 =|| [[span(style=color: red  ,    30.02)]]|| [[span(style=color: green,    26.46)]]||
+||=Factor of 2                                    =||                                   1.00||                                   1.00||
+||=Index of Agreement                             =|| [[span(style=color: green,     0.30)]]|| [[span(style=color: red  ,     0.07)]]||
+||=Threshold (ug/m3)                              =||                                 100.00||                                 100.00||
+||=Odds Ratio                                     =|| [[span(style=color: green,     2.00)]]|| [[span(style=color: red  ,     0.00)]]||
+||=Odds Ratio Skill Score                         =|| [[span(style=color: green,     0.33)]]|| [[span(style=color: red  ,    -1.00)]]||
+||=Hitrate                                        =|| [[span(style=color: green,     0.67)]]|| [[span(style=color: red  ,     0.50)]]||
+||=False Alarm Rate                               =|| [[span(style=color: green,     0.50)]]|| [[span(style=color: red  ,     1.00)]]||
+||=False Alarm Ratio                              =|| [[span(style=color: green,     0.33)]]|| [[span(style=color: red  ,     0.67)]]||
+||=Number Obs >= Threshold and Model >= Threshold =||                                      2||                                      1||
+||=Number Obs < Threshold and Model >= Threshold  =||                                      1||                                      2||
+||=Number Obs >= Threshold and Model < Threshold  =||                                      1||                                      1||
+||=Number Obs < Threshold and Model < Threshold   =||                                      1||                                      0||
+||=Maximum Observation Value (ug/m3)              =||                                 151.24||                                 133.56||
+||=Maximum Model Value (ug/m3)                    =||                                 139.73||                                 132.00||
+||=95th Percentile Observation Value (ug/m3)      =||                                 147.70||                                 129.67||
+||=95th Percentile Model Value (ug/m3)            =||                                 138.11||                                 130.52||
+||=Mean Observation Value (ug/m3)                 =||                                 118.42||                                 110.22||
+||=Mean Model Value (ug/m3)                       =||                                 117.11||                                 112.20||
+||=Standard Deviation of Observations (ug/m3)     =||                                  22.98||                                  15.99||
+||=Standard Deviation of Model (ug/m3)            =||                                  19.98||                                  17.82||
+||=Percentage of Correct values (%)               =||                                   0.00||                                   0.00||
+||=Percentage of Over-predictions (%)             =||                                  40.00||                                  75.00||
+||=Percentage of Under-predictions (%)            =||                                  60.00||                                  25.00||
+||=Units                                          =||                                  ug/m3||                                  ug/m3||
+||||||= '''CO''' =||
+||=Number of sites                                =||                                   None||                                   None||
+||=Number of points                               =||                                   None||                                      4||
+||=Correlation                                    =||                                   None||                                  -0.62||
+||=Bias (ug/m3)                                   =||                                   None||                                   1.98||
+||=Normalised Mean Bias                           =||                                   None||                                   0.02||
+||=Modified Normalised Mean Bias                  =||                                   None||                                   0.02||
+||=Normalised Mean Gross Error                    =||                                   None||                                   0.20||
+||=Fractional Gross Error                         =||                                   None||                                   0.19||
+||=Root Mean Square Error (ug/m3)                 =||                                   None||                                  26.46||
+||=Factor of 2                                    =||                                   None||                                   1.00||
+||=Index of Agreement                             =||                                   None||                                   0.07||
+||=Threshold (ug/m3)                              =||                                   None||                                 100.00||
+||=Odds Ratio                                     =||                                   None||                                   0.00||
+||=Odds Ratio Skill Score                         =||                                   None||                                  -1.00||
+||=Hitrate                                        =||                                   None||                                   0.50||
+||=False Alarm Rate                               =||                                   None||                                   1.00||
+||=False Alarm Ratio                              =||                                   None||                                   0.67||
+||=Number Obs >= Threshold and Model >= Threshold =||                                   None||                                      1||
+||=Number Obs < Threshold and Model >= Threshold  =||                                   None||                                      2||
+||=Number Obs >= Threshold and Model < Threshold  =||                                   None||                                      1||
+||=Number Obs < Threshold and Model < Threshold   =||                                   None||                                      0||
+||=Maximum Observation Value (ug/m3)              =||                                   None||                                 133.56||
+||=Maximum Model Value (ug/m3)                    =||                                   None||                                 132.00||
+||=95th Percentile Observation Value (ug/m3)      =||                                   None||                                 129.67||
+||=95th Percentile Model Value (ug/m3)            =||                                   None||                                 130.52||
+||=Mean Observation Value (ug/m3)                 =||                                   None||                                 110.22||
+||=Mean Model Value (ug/m3)                       =||                                   None||                                 112.20||
+||=Standard Deviation of Observations (ug/m3)     =||                                   None||                                  15.99||
+||=Standard Deviation of Model (ug/m3)            =||                                   None||                                  17.82||
+||=Percentage of Correct values (%)               =||                                   None||                                   0.00||
+||=Percentage of Over-predictions (%)             =||                                   None||                                  75.00||
+||=Percentage of Under-predictions (%)            =||                                   None||                                  25.00||
+||=Units                                          =||                                   None||                                  ug/m3||

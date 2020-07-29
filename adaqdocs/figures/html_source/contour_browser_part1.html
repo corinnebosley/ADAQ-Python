@@ -1,0 +1,235 @@
+//**************************************************************************
+//First part of include text for contour browser
+//Contains main part of javascript code.
+
+
+//Set up image numbers
+FirstImg = 0; // First image in sequence
+LastImg = FilenamesDict[mydiag].length-1; // Last image in sequence
+maxImg=FilenamesDict[mydiag].length;      // Maximum number of images in any sequence (for array dimensioning)
+
+//Set up animation speeds
+DelayStep = 100;  // Initial delay step
+MinDelay = 10;   // Minimum delay in ms (avoids crashes with slow clients)
+MaxDelay = 4000; // Maximum delay so it doesnt go to slow and become unresponsive
+ImageNum = 0;    // Index of current image
+StopFlag = 0;    // Flag indicating state of animation (0 = running, 1 = stopped)
+// Initial animation delay in ms (slower if only a few images):
+if ( maxImg > 10 ){
+  Delay=200
+} else {
+  Delay=500
+}
+
+
+//Set up function loadimgsfirst
+
+loadimgsfirst();
+
+// Preload animation images (first time declaring arrays and image objects)
+// USER CHANGES HERE (location of images)
+function loadimgsfirst()
+{
+  theImages = new Array();
+  quicklook = new Image();
+
+  for (var ifile = 0; ifile < FilenamesDict[mydiag].length; ifile++)
+   {
+   theImages[ifile] = new Image();
+   theImages[ifile].src = FilenamesDict[mydiag][ifile];
+   }
+}
+
+//Load animation images
+
+function loadimgs()
+{
+  // First load in the current image so that it displays quickly
+  // before having to load in the full array of images (which may take several seconds)
+  // -this dramatically improves the responsiveness of the web page.
+
+  quicklook.src = FilenamesDict[mydiag][ImageNum]
+  document.fraOne.Animation.src = quicklook.src;
+  for (var ifile = 0; ifile < FilenamesDict[mydiag].length; ifile++)
+   {
+   theImages[ifile].src = FilenamesDict[mydiag][ifile];
+   }
+}
+
+// Preload button icon images (so mouseover doesnt slow things down)
+function loadicons()
+{
+  play = new Image();
+  play.src="./icons/play.jpg"
+  play2 = new Image();
+  play2.src="./icons/play2.jpg"
+  stop = new Image();
+  stop.src="./icons/stop.jpg"
+  stop2 = new Image();
+  stop2.src="./icons/stop2.jpg"
+  forward = new Image();
+  forward.src="./icons/forward.jpg"
+  forward2 = new Image();
+  forward2.src="./icons/forward2.jpg"
+  back = new Image();
+  back.src="./icons/back.jpg"
+  back2 = new Image();
+  back2.src="./icons/back2.jpg"
+  faster = new Image();
+  faster.src="./icons/faster.jpg"
+  faster2 = new Image();
+  faster2.src="./icons/faster2.jpg"
+  slower = new Image();
+  slower.src="./icons/slower.jpg"
+  slower2 = new Image();
+  slower2.src="./icons/slower2.jpg"
+}
+// Mouseover effects
+function mouseOver1()
+{
+ document.fraOne.b1.src =play.src;
+}
+function mouseOut1()
+{
+ document.fraOne.b1.src =play2.src;
+}
+function mouseOver2()
+{
+ document.fraOne.b2.src =stop.src;
+}
+function mouseOut2()
+{
+ document.fraOne.b2.src =stop2.src;
+}
+function mouseOver3()
+{
+ document.fraOne.b3.src =slower.src;
+}
+function mouseOut3()
+{
+ document.fraOne.b3.src =slower2.src;
+}
+function mouseOver4()
+{
+ document.fraOne.b4.src =faster.src;
+}
+function mouseOut4()
+{
+ document.fraOne.b4.src =faster2.src;
+}
+function mouseOver5()
+{
+ document.fraOne.b5.src =back.src;
+}
+function mouseOut5()
+{
+ document.fraOne.b5.src =back2.src;
+}
+function mouseOver6()
+{
+ document.fraOne.b6.src =forward.src;
+}
+function mouseOut6()
+{
+ document.fraOne.b6.src =forward2.src;
+}
+// Animate images forward, loop continously
+function Animate()
+{
+  ImageNum++;
+  if(ImageNum > LastImg) ImageNum = FirstImg;
+  document.getElementById("frmFraNum").innerHTML="Frame "+ ImageNum;
+  document.fraOne.Animation.src = theImages[ImageNum].src;
+}
+// Increase Delay by DelayStep while animating
+function Slower()
+{
+  if(StopFlag == 0)
+   {
+    Delay += DelayStep;
+    if(Delay > MaxDelay) Delay = MaxDelay;
+    document.getElementById("frmDelayMS").innerHTML= Delay + " ms";
+   }
+}
+// Decrease Delay by DelayStep while animating
+function Faster()
+{
+  if(StopFlag == 0)
+   {
+    Delay -= DelayStep;
+    if(Delay < MinDelay) Delay = MinDelay;
+    document.getElementById("frmDelayMS").innerHTML= Delay + " ms";
+   }
+}
+// Step image back one while not animating
+function StepBck()
+{
+  if(StopFlag == 1)
+   {
+    ImageNum--;
+    if(ImageNum < FirstImg) ImageNum = LastImg;
+    document.fraOne.Animation.src = theImages[ImageNum].src;
+    document.getElementById("frmFraNum").innerHTML="Frame "+ ImageNum;
+   }
+}
+// Step image forward one while not animating
+function StepFwd()
+{
+  if(StopFlag == 1)
+   {
+    ImageNum++;
+    if(ImageNum > LastImg) ImageNum = FirstImg;
+    document.fraOne.Animation.src = theImages[ImageNum].src;
+    document.getElementById("frmFraNum").innerHTML="Frame "+ ImageNum;
+   }
+}
+// Start (or restart) animation
+function Start()
+{
+  if (StopFlag == 1)
+  {
+    StopFlag = 0;
+    document.getElementById("frmAnimStatus").innerHTML="Running";
+    timerID=setTimeout('Animate()', Delay);
+  }
+}
+// Stop animation
+function Stop()
+{
+  if (StopFlag == 0)
+   {
+    StopFlag = 1;
+    document.getElementById("frmAnimStatus").innerHTML="Stopped";
+   }
+}
+// Change diagnostic: adjust filename tag used.
+function getDiag()
+{
+	o = document.myselections.diag.options;
+	i = o[o.selectedIndex].value;
+	mydiag = tag[i];
+        ImageNum=0
+        LastImg=FilenamesDict[mydiag].length-1
+        maxImg=FilenamesDict[mydiag].length
+        if ( maxImg > 10 ){
+          Delay=200
+        } else {
+          Delay=500
+        }
+        document.getElementById("frmDelayMS").innerHTML= Delay + " ms";
+        loadimgs();
+	return mydiag;
+}
+</SCRIPT>
+
+</SCRIPT>
+
+
+<div class="container-wide">
+<div class="content">
+<CENTER><form align=center name="myselections">
+<SELECT NAME="diag" ONCLICK="mydiag=getDiag()" SIZE=1>
+
+<!--  End of first part for use in contour browser
+**************************************************************
+-->

@@ -1,0 +1,48 @@
+#
+#   name_field_plot.ini
+#
+#   Configuration file for NAME field plot script
+#   Blank lines and those beginning with '#' ignored
+#   Comma seperate lists
+#   Any variables set in config.py are also expanded:
+#    - SAMPLE_DATADIR
+#
+#   This file should contain a quick-to-run example which will test full functionality
+#
+#
+#--------------
+# NAME
+field_attribute_dict = {'Species':'VOLCANIC_ASH'}
+models_list = ["name"]
+# z level choices - optional
+z_level_list = [30]
+z_leveltype = 'flight_level'
+
+short_name_list = ["VOLCANIC_ASH_AIR_CONCENTRATION"]
+
+#--------------
+# Paths...
+
+models_dir_list      = ["SAMPLE_DATADIR/name/Fields_grid99*"]
+models_fmt_list      = ["name"]
+
+plot_dir             = "${DATADIR}/ADAQ_python/plots"
+
+#-------------
+# Some style options
+levels_list          = [1.0e-5, 3.2e-5, 1.0e-4, 3.2e-4, 1.0e-3, 3.2e-3, 1.0e-2, 3.2e-2]
+extent_list          = [-35, 10, 45, 70]
+cmap                 = 'YlGnBu'
+mapping              = 'countries'
+cbar_label           = 'Relative Concentrations'
+cbar_num_fmt         = '%.1e'
+title                = 'name_verbose'
+suptitle             = 'Exercise Exercise Exercise'
+mobrand              = True
+
+#-----------
+# Annotation options
+annote_location     = 'right'
+#annote              = 'Here are a few lines of text\n intended to test the annotation feature.\n\n \
+#You can replace this with your own text or\nchoose one of the default annotation options.'
+annote              = 'NAME_defaults'

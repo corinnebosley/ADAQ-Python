@@ -1,0 +1,13 @@
+#!/bin/ksh
+# Script to run MaxHeight.py
+
+
+python <<EOF
+import MaxHeight
+
+workdir = '/project/NAME/apnm/NAMEIIIout/PythonHackathon/DataFiles/Fields_grid84_'
+
+
+MaxHeight.MaxHeight(workdir)
+
+EOF

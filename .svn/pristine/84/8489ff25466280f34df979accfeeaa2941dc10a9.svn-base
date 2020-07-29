@@ -1,0 +1,38 @@
+#
+#   name_field_plot_diff_rad.ini
+#
+#   Configuration file for NAME field plot diff script
+#   Blank lines and those beginning with '#' ignored
+#   Comma seperate lists
+#   Any variables set in config.py are also expanded:
+#    - SAMPLE_DATADIR
+#
+#   This file should contain a quick-to-run example which will test full functionality
+#
+#
+#--------------
+# NAME
+models_list = ["name"]
+short_name_list = ["CAESIUM-137_AIR_CONCENTRATION"]
+
+#--------------
+# Paths...
+
+models_dir_case1_list = ["SAMPLE_DATADIR/name/Fields_grid1_C1*"]
+models_dir_case2_list = ["SAMPLE_DATADIR/name_kgo/Fields_grid1_C1*"]
+models_fmt_list       = ["name"]
+plot_dir_montage     = "${DATADIR}/ADAQ_python_montage/plots"
+
+#-------------
+# Some style options
+cmap                 = 'YlGnBu'
+mapping              = 'countries'
+suptitle             = 'Branch'
+mobrand              = True
+
+#-----------
+# Annotation options
+annote_location     = 'right'
+#annote              = 'Here are a few lines of text\n intended to test the annotation feature.\n\n \
+#You can replace this with your own text or\nchoose one of the default annotation options.'
+annote              = 'NAME_defaults'

@@ -1,0 +1,86 @@
+\begin{table}
+  \begin{center}
+    \begin{tabular}{|l|c|c|} \hline
+ & \textbf{model1}  & \textbf{model2} \\ \hline 
+ Number of sites                               &      None &      None \\  \hline
+ Number of points                              &         5 &         4 \\  \hline
+ Correlation                                   &     -0.21 &     -0.62 \\  \hline
+ Bias ($\mu g\ m^{-3}$)                        &     -1.31 &      1.98 \\  \hline
+ Normalised Mean Bias                          &     -0.01 &      0.02 \\  \hline
+ Modified Normalised Mean Bias                 & -8.47e-03 &      0.02 \\  \hline
+ Normalised Mean Gross Error                   &      0.23 &      0.20 \\  \hline
+ Fractional Gross Error                        &      0.22 &      0.19 \\  \hline
+ Root Mean Square Error ($\mu g\ m^{-3}$)      &     30.02 &     26.46 \\  \hline
+ Factor of 2                                   &      1.00 &      1.00 \\  \hline
+ Index of Agreement                            &      0.30 &      0.07 \\  \hline
+ Threshold ($\mu g\ m^{-3}$)                   &    100.00 &    100.00 \\  \hline
+ Odds Ratio                                    &      2.00 &      0.00 \\  \hline
+ Odds Ratio Skill Score                        &      0.33 &     -1.00 \\  \hline
+ Hitrate                                       &      0.67 &      0.50 \\  \hline
+ False Alarm Rate                              &      0.50 &      1.00 \\  \hline
+ False Alarm Ratio                             &      0.33 &      0.67 \\  \hline
+ Number Obs $\geq$ Threshold and Model $\geq$ Threshold &         2 &         1 \\  \hline
+ Number Obs$<$Threshold and Model $\geq$ Threshold &         1 &         2 \\  \hline
+ Number Obs $\geq$ Threshold and Model$<$Threshold &         1 &         1 \\  \hline
+ Number Obs$<$Threshold and Model$<$Threshold  &         1 &         0 \\  \hline
+ Maximum Observation Value ($\mu g\ m^{-3}$)   &    151.24 &    133.56 \\  \hline
+ Maximum Model Value ($\mu g\ m^{-3}$)         &    139.73 &    132.00 \\  \hline
+ 95th Percentile Observation Value ($\mu g\ m^{-3}$) &    147.70 &    129.67 \\  \hline
+ 95th Percentile Model Value ($\mu g\ m^{-3}$) &    138.11 &    130.52 \\  \hline
+ Mean Observation Value ($\mu g\ m^{-3}$)      &    118.42 &    110.22 \\  \hline
+ Mean Model Value ($\mu g\ m^{-3}$)            &    117.11 &    112.20 \\  \hline
+ Standard Deviation of Observations ($\mu g\ m^{-3}$) &     22.98 &     15.99 \\  \hline
+ Standard Deviation of Model ($\mu g\ m^{-3}$) &     19.98 &     17.82 \\  \hline
+ Percentage of Correct values ($\%$)           &      0.00 &      0.00 \\  \hline
+ Percentage of Over-predictions ($\%$)         &     40.00 &     75.00 \\  \hline
+ Percentage of Under-predictions ($\%$)        &     60.00 &     25.00 \\  \hline
+ Units                                         &    $\mu g\ m^{-3}$ &    $\mu g\ m^{-3}$ \\  \hline
+    \end{tabular}
+    \caption{O3: Statistics for Tue 25-Mar-2014 23:00 - Thu 27-Mar-2014 00:00}
+    \label{StatsO3}
+  \end{center}
+\end{table}
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}{|l|c|c|} \hline
+ & \textbf{model1}  & \textbf{model2} \\ \hline 
+ Number of sites                               &      None &      None \\  \hline
+ Number of points                              &      None &         4 \\  \hline
+ Correlation                                   &      None &     -0.62 \\  \hline
+ Bias ($\mu g\ m^{-3}$)                        &      None &      1.98 \\  \hline
+ Normalised Mean Bias                          &      None &      0.02 \\  \hline
+ Modified Normalised Mean Bias                 &      None &      0.02 \\  \hline
+ Normalised Mean Gross Error                   &      None &      0.20 \\  \hline
+ Fractional Gross Error                        &      None &      0.19 \\  \hline
+ Root Mean Square Error ($\mu g\ m^{-3}$)      &      None &     26.46 \\  \hline
+ Factor of 2                                   &      None &      1.00 \\  \hline
+ Index of Agreement                            &      None &      0.07 \\  \hline
+ Threshold ($\mu g\ m^{-3}$)                   &      None &    100.00 \\  \hline
+ Odds Ratio                                    &      None &      0.00 \\  \hline
+ Odds Ratio Skill Score                        &      None &     -1.00 \\  \hline
+ Hitrate                                       &      None &      0.50 \\  \hline
+ False Alarm Rate                              &      None &      1.00 \\  \hline
+ False Alarm Ratio                             &      None &      0.67 \\  \hline
+ Number Obs $\geq$ Threshold and Model $\geq$ Threshold &      None &         1 \\  \hline
+ Number Obs$<$Threshold and Model $\geq$ Threshold &      None &         2 \\  \hline
+ Number Obs $\geq$ Threshold and Model$<$Threshold &      None &         1 \\  \hline
+ Number Obs$<$Threshold and Model$<$Threshold  &      None &         0 \\  \hline
+ Maximum Observation Value ($\mu g\ m^{-3}$)   &      None &    133.56 \\  \hline
+ Maximum Model Value ($\mu g\ m^{-3}$)         &      None &    132.00 \\  \hline
+ 95th Percentile Observation Value ($\mu g\ m^{-3}$) &      None &    129.67 \\  \hline
+ 95th Percentile Model Value ($\mu g\ m^{-3}$) &      None &    130.52 \\  \hline
+ Mean Observation Value ($\mu g\ m^{-3}$)      &      None &    110.22 \\  \hline
+ Mean Model Value ($\mu g\ m^{-3}$)            &      None &    112.20 \\  \hline
+ Standard Deviation of Observations ($\mu g\ m^{-3}$) &      None &     15.99 \\  \hline
+ Standard Deviation of Model ($\mu g\ m^{-3}$) &      None &     17.82 \\  \hline
+ Percentage of Correct values ($\%$)           &      None &      0.00 \\  \hline
+ Percentage of Over-predictions ($\%$)         &      None &     75.00 \\  \hline
+ Percentage of Under-predictions ($\%$)        &      None &     25.00 \\  \hline
+ Units                                         &      None &    $\mu g\ m^{-3}$ \\  \hline
+    \end{tabular}
+    \caption{CO: Statistics for Tue 25-Mar-2014 23:00 - Thu 27-Mar-2014 00:00}
+    \label{StatsCO}
+  \end{center}
+\end{table}
+

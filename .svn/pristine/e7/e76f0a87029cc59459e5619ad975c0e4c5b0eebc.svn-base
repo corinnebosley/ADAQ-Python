@@ -1,0 +1,51 @@
+#
+#   aqum_convert_nc.ini
+#
+#   Config file for converting AQUM files to netcdf
+#   Blank lines and those beginning with '#' ignored
+#   Comma seperate lists
+#
+#   This file should contain a quick-to-run example which will test full functionality
+#
+#
+
+#--------------
+# Dates
+
+#Number of days to plot
+#range_days           = 3
+
+#Start and end date
+start_date	     = 20140301
+end_date         = 20140310
+forecast_day     = 1
+
+#--------------
+
+#List of species to include (eg 3,NO2,PM2p5,PM10)
+short_name_list      = O3,NO2,PM2p5,PM10
+
+#List of model labels - will take from models_dir_list if not set
+#models_list          = oper
+
+#List of site types to consider
+#site_types_list      = RURAL, REMOTE, SUBURBAN, URBAN_BACKGROUND
+
+
+#--------------
+# Paths...
+
+models_dir_list      = /data/local/apdl/AQUM_Cases/mi-ac396
+#obs_dir              = /data/nwp1/apdl/AQobs/2014_reformatted_provisional
+
+#plot_dir             = $DATADIR/AQUM/verification/python/plots
+
+#--------------
+# Files...
+
+#sites_file           = /home/h03/apdg/AQUM/AQcases_fcm/code/aq_sites_GEMSRAQ_v4b_dev.txt
+
+#--------------
+# What to produce
+
+#calc_stats           = False

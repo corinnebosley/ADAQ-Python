@@ -1,0 +1,160 @@
+#
+#   aq_plot.ini
+#
+#   Configuration file for AQ plot script
+#   Blank lines and those beginning with '#' ignored
+#   Comma seperate lists
+#   Any variables set in config.py are also expanded:
+#    - SAMPLE_DATADIR
+#
+#   This file should contain a quick-to-run example which will test full functionality
+#
+#
+
+#--------------
+# Dates - nb only 2 of range_days, start_date and end_date need to be given
+
+#Number of days to plot
+range_days           = 1
+
+#Start and end date (yyyymmdd) - this will be 00Z on this date
+start_date	     = 20140326
+#end_date             = 20140603
+
+#Forecast day of model data - set to None to retrieve all days
+# - set to a single number to retrieve a particular day of leadtime,
+#   eg 1 would retrieve 01Z-24Z on the first full day of every forecast run.
+# - set to "forecast" to retrieve data for all days from a single forecast run
+#   this will be for the forecast whose first full day is the start_date.
+#   (Not used for NAME data.)
+forecast_day        = 1
+
+#--------------
+
+#List of species to include (eg O3,NO2,PM2p5,PM10,'grass_pollen')
+short_name_list      = ["O3","PM2p5"]
+
+#List of site types to consider
+#New classifications used from Jan 2017
+# "RURAL_BACKGROUND", "SUBURBAN_BACKGROUND", "URBAN_BACKGROUND"
+# "SUBURBAN_INDUSTRIAL", "URBAN_INDUSTRIAL", "URBAN_TRAFFIC"
+#For pollen sites: 'Pollen'
+site_types_list      = ["RURAL_BACKGROUND", "SUBURBAN_BACKGROUND", "URBAN_BACKGROUND"]
+
+
+#--------------
+# Models
+
+#Comma separated list of model data directories
+# (if set to empty list, then no models read in/plotted)
+models_dir_list      = ["SAMPLE_DATADIR/aqum_output/oper","SAMPLE_DATADIR/nameaq_output/name_casestudy"]
+#Comma separated list of model formats: pp, nimrod, maccens, ecgrib
+models_fmt_list      = ["pp","name"]
+#List of model labels - will take from models_dir_list if not set
+#models_list          = ["operational","name_casestudy"]
+#List of nimrod data types for each model. Options are 'raw', 'sppo' or None.
+#If not nimrod data, then ignored. If nimrod, but set to None, then defaults to 'sppo'
+#nimrod_data_type_list = ['raw', 'sppo']
+
+#List of colours to overwrite default. 
+#Note first colour in list is for the observations.
+#Models (where data is available) then take next colours in order.
+#line_colours_list = ['k','green','blue']
+
+#Factors to apply to scale all data by
+#First value is for observations, followed by models in same order as models_dir_list
+#scaling_factors_list = [1.0, 1.0, 20.0]
+
+#--------------
+# Observations
+
+#Format of observations: aurn, camsaqobs, pollen
+obs_fmt              = "aurn"
+#Directory of observations
+# e.g. in the Met Office /data/users/airquser/AQ_observations/AURN/fixed_format/<year>_fixed_format
+# (if commented out, then no obs read in/plotted)
+#First directory in list is given highest priority for data and any missing data
+#will be filled in in order from the next directory in list onwards.
+#For pollen obs, use ["/home/h06/apdl/Pollen/BihourlyObs/csv/*bihourly_raw_2014.csv"]
+obs_dir_list         = ["SAMPLE_DATADIR/AURN_obs"]
+
+#--------------
+# Other Paths and Files...
+
+#Output directory for plots
+plot_dir             = "$DATADIR/AQUM/verification/python/plots"
+
+#Filename of file contain information about site locations
+# e.g. in ADAQ Python: CODE_DIR/adaqscripts/aq_sites_all.txt
+#For pollen, "/home/h06/apdl/Pollen/PollenSites.txt"
+sites_file           = "SAMPLE_DATADIR/AURN_obs/aq_sites_NewClass_short.txt"
+
+html_dir = "$HOME/public_html/aq_plot/"
+
+#--------------
+# Contour plotting options
+
+#Mapping extent: [xmin,xmax,ymin,ymax]
+#extent_list = [-11.,11.,48.,61]
+#Contour levels
+#levels_list = [20., 40., 60., 80., 100.]
+#Dictionary of colour levels, keys are shortnames. 
+#Note if cmap=DAQI (default), then max number of levels is 11, if cmap=CAMS then max is 13.
+#levels_dict = {'PM2p5': [0., 5., 10., 15., 20., 25., 30., 35., 40., 45., 50.]}
+#Number of contour levels
+#nlevels = 11
+#Colour map (eg YlGnBu, DAQI, CAMS)
+#Nb setting to CAMS gives CAMS contour levels by default
+#cmap = "YlGnBu"
+#Colour bar orientation
+#cbar_orientation = "vertical"
+#Projection - if not set, then uses model grid projection instead (eg rotated pole)
+#projection='PlateCarree'
+#Figure size - if not set, then generates automatic figure size to best fit image.
+#figsize=[7,4]
+
+#--------------
+# Other options
+
+strict_statistics = True
+#Also output everything in DAQI levels? Must have min of 2 days
+daqi = True
+#Units to use, split between chemical species and aerosols. Default to ug/m3.
+#Options for chem_units = 'ug/m3', 'ppb', 'cm-3'. Currently only 'ug/m3' allowed for aerosol_units
+#chem_units = "ppb"
+#aerosol_units = "ug/m3"
+#List of statistics to plot as a timeseries (see timeseries_stats.STATS_INFO for full list)
+timeseries_of_stats_list = ['bias','rmse']
+#List of simple cube-aggregate statistics to plot as a timeseries (see cube_statistics.CUBE_AGGREGATORS for full list)
+#Note this will plot model data even if no obs available (unlike timeseries_of_stats)
+timeseries_of_aggregate_stats_list = ['NANMEAN','NANMAX']
+#Dictionary of multiple species to include on single timeseries plot. 
+#The keys represent a title to describe a group, the value associated with each key
+#should be a list of the species for this group. Note these species also need to be in
+#short_name_list.
+timeseries_multiple_short_names_dict = {'O3+PM2p5': ['O3','PM2p5']}
+#List of stats output file formats
+# Available formats: 'csv', 'wiki', 'wiki-colour','html', 'tex', 'nc'
+calc_stats_format_list = ['csv', 'wiki']
+#Which percentile to output in stats, defaults to 95th percentile
+percentile = 95
+
+#--------------
+# What to produce
+
+contours             = True
+calc_stats           = True
+#Note daqi_site_maps are only enabled if daqi=True
+daqi_site_maps       = True
+histograms           = True
+qqplots              = True
+soccer_plots         = True
+timeseries           = True
+diurnal              = True
+timeseries_of_stats  = True
+timeseries_of_aggregate_stats = True
+timeseries_multiple_short_names = True
+#Whether to save netcdf files of data, along with plots
+save_cubes_nc        = True
+#save_cubes_label     = ''
+

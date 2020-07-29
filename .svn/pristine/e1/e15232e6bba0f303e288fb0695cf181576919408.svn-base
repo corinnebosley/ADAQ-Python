@@ -1,0 +1,38 @@
+#
+#   name_postage_stamp_plot.ini
+#
+#   Configuration file for NAME postage stamp plot script
+#   Blank lines and those beginning with '#' ignored
+#   Comma seperate lists
+#   Any variables set in config.py are also expanded:
+#    - SAMPLE_DATADIR
+#
+#   This file should contain a quick-to-run example which will test full functionality
+#
+#
+#--------------
+# Essential
+models_dir_list      = ["SAMPLE_DATADIRname_ensemble/member*/Fields_grid4*.txt"]
+models_fmt_list      = ["ens_name"]
+models_list          = ["mogreps-g_name"]
+short_name_list      = ["CAESIUM-137_AIR_CONCENTRATION"]
+
+# Optional
+field_attribute_dict = {'Field Name':'Unnamed Field Req 8'}
+#z_level_list         = [0]
+#z_leveltype          = 'height'
+num_members          = '18'
+plot_dir             = "CODE_DIR/adaqdocs/figures/adaq_plotting/ensemble"
+
+#-------------
+# Some style options
+levels_list          = [1.0e-1, 3.2e-1, 1.0e+0, 3.2e+0, 1.0e+1, 3.2e+1, 1.0e+2]
+extent_list          = [0, 15, 49, 60]
+cmap                 = 'YlGnBu'
+mapping              = 'countries'
+cbar                 = True
+cbar_label           = 'Relative Concentrations'
+cbar_num_fmt         = '%.1e'
+#title                = 'A short title'
+#suptitle             = 'MOGREPS-G ensemble forecast with 18 members'
+#mobrand              = True

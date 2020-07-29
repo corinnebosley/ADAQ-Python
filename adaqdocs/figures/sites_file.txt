@@ -1,0 +1,6 @@
+site_id abbrev grid_latitude grid_longitude latitude longitude site_altitude site_name site_type surface_altitude 
+  35628361.1405974999 YW     -1.895994455   -0.772508508   50.597499850   -3.716388941      119 Yarner_Wood      RURAL            210.024750 
+  35665278.1458833367 ACTH    3.386127197   -0.476009092   55.883335110   -3.347222328      260 Auchencorth_Moss RURAL            160.710464 
+  35696583.1425036117 AH      0.004814994   -0.325150323   52.503612520   -3.034166574      370 Aston_Hill       RURAL            235.209167 
+  35790611.1471574977 ABD     4.658122523    0.220975519   57.157501220   -2.093888760       20 Aberdeen         URBAN_BACKGROUND 38.888828 
+  35867333.1415711120 HAR    -0.922965487    0.729340354   51.571109770   -1.326666594      137 Harwell          RURAL            104.795067 

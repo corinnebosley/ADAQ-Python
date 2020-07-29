@@ -1,0 +1,27 @@
+#
+#   plot_trajectory.ini
+#
+#   Configuration file for trajectory plot script
+#   Blank lines and those beginning with '#' ignored
+#   Comma seperate lists
+#   Any variables set in config.py are also expanded:
+#    - SAMPLE_DATADIR
+#
+#   This file should contain a quick-to-run example which will test full functionality
+#
+#
+#--------------
+# Paths...
+
+models_dir_list        = ["SAMPLE_DATADIR/name_trajectory/Data_Traj_C1_*.txt"]
+plot_dir               = "${DATADIR}/ADAQ_python/plots"
+
+#-------------
+# Some style options
+marker_interval = 12  # Marker interval in hours
+extent_list = [-20, 5, 45, 60]
+title = 'Example Trajectories'
+plotname = 'TrajectoryPlot.png'
+mo_branding = True
+release_info_list = ['0.1333W', '51.5N', '02/12/2016 08:00:00 UTC']
+mapping = 'countries'

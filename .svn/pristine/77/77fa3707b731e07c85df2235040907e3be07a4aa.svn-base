@@ -1,0 +1,70 @@
+Statistics for Tue 25-Mar-2014 23:00 - Thu 27-Mar-2014 00:00,,,
+     Phenomemon,           Statistic,   model1,   model2
+
+             O3,              nsites,      None,      None
+             O3,                npts,         5,         4
+             O3,         correlation,     -0.21,     -0.62
+             O3,        bias (ug/m3),     -1.31,      1.98
+             O3,                 nmb,     -0.01,      0.02
+             O3,                mnmb, -8.47e-03,      0.02
+             O3,                nmge,      0.23,      0.20
+             O3,                 fge,      0.22,      0.19
+             O3,        rmse (ug/m3),     30.02,     26.46
+             O3,                fac2,      1.00,      1.00
+             O3,                 ioa,      0.30,      0.07
+             O3,   threshold (ug/m3),    100.00,    100.00
+             O3,          odds_ratio,      2.00,      0.00
+             O3,                orss,      0.33,     -1.00
+             O3,             hitrate,      0.67,      0.50
+             O3,      falsealarmrate,      0.50,      1.00
+             O3,     falsealarmratio,      0.33,      0.67
+             O3,           o>=t_m>=t,         2,         1
+             O3,            o<t_m>=t,         1,         2
+             O3,            o>=t_m<t,         1,         1
+             O3,             o<t_m<t,         1,         0
+             O3,      maxobs (ug/m3),    151.24,    133.56
+             O3,      maxmod (ug/m3),    139.73,    132.00
+             O3,     pc95obs (ug/m3),    147.70,    129.67
+             O3,     pc95mod (ug/m3),    138.11,    130.52
+             O3,     meanobs (ug/m3),    118.42,    110.22
+             O3,     meanmod (ug/m3),    117.11,    112.20
+             O3,       sdobs (ug/m3),     22.98,     15.99
+             O3,       sdmod (ug/m3),     19.98,     17.82
+             O3,    perc_correct (%),      0.00,      0.00
+             O3,       perc_over (%),     40.00,     75.00
+             O3,      perc_under (%),     60.00,     25.00
+             O3,               units,     ug/m3,     ug/m3
+
+             CO,              nsites,      None,      None
+             CO,                npts,      None,         4
+             CO,         correlation,      None,     -0.62
+             CO,        bias (ug/m3),      None,      1.98
+             CO,                 nmb,      None,      0.02
+             CO,                mnmb,      None,      0.02
+             CO,                nmge,      None,      0.20
+             CO,                 fge,      None,      0.19
+             CO,        rmse (ug/m3),      None,     26.46
+             CO,                fac2,      None,      1.00
+             CO,                 ioa,      None,      0.07
+             CO,   threshold (ug/m3),      None,    100.00
+             CO,          odds_ratio,      None,      0.00
+             CO,                orss,      None,     -1.00
+             CO,             hitrate,      None,      0.50
+             CO,      falsealarmrate,      None,      1.00
+             CO,     falsealarmratio,      None,      0.67
+             CO,           o>=t_m>=t,      None,         1
+             CO,            o<t_m>=t,      None,         2
+             CO,            o>=t_m<t,      None,         1
+             CO,             o<t_m<t,      None,         0
+             CO,      maxobs (ug/m3),      None,    133.56
+             CO,      maxmod (ug/m3),      None,    132.00
+             CO,     pc95obs (ug/m3),      None,    129.67
+             CO,     pc95mod (ug/m3),      None,    130.52
+             CO,     meanobs (ug/m3),      None,    110.22
+             CO,     meanmod (ug/m3),      None,    112.20
+             CO,       sdobs (ug/m3),      None,     15.99
+             CO,       sdmod (ug/m3),      None,     17.82
+             CO,    perc_correct (%),      None,      0.00
+             CO,       perc_over (%),      None,     75.00
+             CO,      perc_under (%),      None,     25.00
+             CO,               units,      None,     ug/m3

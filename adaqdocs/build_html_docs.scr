@@ -1,0 +1,31 @@
+#!/bin/ksh
+
+docdir=`dirname $0`
+if [ $docdir = '.' ]
+then
+  docdir=`pwd`
+fi  
+scriptdir=$docdir/..
+
+export PYTHONPATH=$PYTHONPATH:$scriptdir/adaqcode
+export PYTHONPATH=$PYTHONPATH:$scriptdir/adaqscripts
+export PYTHONPATH=$PYTHONPATH:$scriptdir/adaqdocs
+export PYTHONPATH=$PYTHONPATH:$scriptdir/adaqsandpit
+
+cd $scriptdir
+rm -rf _build
+
+make html
+
+if [ $1 ]
+then
+  publichtmldir=$1
+  mkdir -p $publichtmldir
+  rm -r $publichtmldir/_build  # rm previous build before cp'ing new build. So that modification 
+  cp -r _build $publichtmldir  # time on directory is when the current version was copied in.
+  echo "HTML pages are now also in $publichtmldir/_build/html"
+fi  
+
+
+
+

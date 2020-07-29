@@ -1,0 +1,48 @@
+#
+#   name_field_plot_diff.ini
+#
+#   Configuration file for NAME field plot script
+#   Blank lines and those beginning with '#' ignored
+#   Comma seperate lists
+#   Any variables set in config.py are also expanded:
+#    - SAMPLE_DATADIR
+#
+#   This file should contain a quick-to-run example which will test full functionality
+#
+#
+#--------------
+
+# Essential 
+suptitle_case1        = 'KGO'
+suptitle_case2        = 'Branch'
+models_dir_case1_list = ["SAMPLE_DATADIR/nameaq_output/eulerian_kgo/Fields_grid1*"]
+models_dir_case2_list = ["SAMPLE_DATADIR/nameaq_output/eulerian/Fields_grid1*"]
+models_fmt_list       = ["name"]
+plot_dir_montage      = "CODE_DIR/adaqdocs/figures/adaq_plotting/montage"
+models_list           = ["global-name"]
+
+# Optional
+short_name_list       = ["NO2_EULERIAN_CONCENTRATION"]
+fail_if_diff          = False
+reldiff_tolerance     = 5
+plot_dir_case1       = "CODE_DIR/adaqdocs/figures/adaq_plotting/case1"
+plot_dir_case2       = "CODE_DIR/adaqdocs/figures/adaq_plotting/case2"
+plot_dir_diff        = "CODE_DIR/adaqdocs/figures/adaq_plotting/diff"
+plot_dir_reldiff     = "CODE_DIR/adaqdocs/figures/adaq_plotting/reldiff"
+abs_diff_levels_list = [-2.0e+1, -2.0, -2.0e-1, 2.0e-1, 2.0, 2.0e+1]
+#rel_diff_levels_list = [-100, -60, -20, 20, 60, 100]
+
+#-------------
+# Some style options
+cmap                 = 'YlGnBu'
+mapping              = 'countries'
+cbar_num_fmt         = '%.1e'
+title                = 'name_verbose'
+units                = 'ug/m3'
+
+#-----------
+# Annotation options
+annote_location     = 'right'
+#annote              = 'Here are a few lines of text\n intended to test the annotation feature.\n\n \
+#You can replace this with your own text or\nchoose one of the default annotation options.'
+annote              = 'NAME_defaults'

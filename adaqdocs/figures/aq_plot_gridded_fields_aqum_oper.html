@@ -1,0 +1,317 @@
+<html>
+<head>
+<title>aqum_oper- gridded fields</title>
+</head>
+<body>
+
+
+<h1>Gridded Fields for aqum_oper</h1>
+
+<SCRIPT LANGUAGE="JavaScript">
+loadicons();
+var FilenamesDict = {'O3': ['./plots/gridded_fields/Fieldplot_aqum_oper_O3_201404020000_basicAQ.png', './plots/gridded_fields/Fieldplot_aqum_oper_O3_201404020000_basicNAME.png', './plots/gridded_fields/Fieldplot_aqum_oper_O3_201404020000_fullAQ.png']}
+mydiag   = "O3"; 
+tag = ['O3'];
+
+//**************************************************************************
+//First part of include text for contour browser
+//Contains main part of javascript code.
+
+
+//Set up image numbers
+FirstImg = 0; // First image in sequence
+LastImg = FilenamesDict[mydiag].length-1; // Last image in sequence
+maxImg=FilenamesDict[mydiag].length;      // Maximum number of images in any sequence (for array dimensioning)
+
+//Set up animation speeds
+DelayStep = 100;  // Initial delay step
+MinDelay = 10;   // Minimum delay in ms (avoids crashes with slow clients)
+MaxDelay = 4000; // Maximum delay so it doesnt go to slow and become unresponsive
+ImageNum = 0;    // Index of current image
+StopFlag = 0;    // Flag indicating state of animation (0 = running, 1 = stopped)
+// Initial animation delay in ms (slower if only a few images):
+if ( maxImg > 10 ){
+  Delay=200
+} else {
+  Delay=500
+}
+
+
+//Set up function loadimgsfirst
+
+loadimgsfirst();
+
+// Preload animation images (first time declaring arrays and image objects)
+// USER CHANGES HERE (location of images)
+function loadimgsfirst()
+{
+  theImages = new Array();
+  quicklook = new Image();
+
+  for (var ifile = 0; ifile < FilenamesDict[mydiag].length; ifile++)
+   {
+   theImages[ifile] = new Image();
+   theImages[ifile].src = FilenamesDict[mydiag][ifile];
+   }
+}
+
+//Load animation images
+
+function loadimgs()
+{
+  // First load in the current image so that it displays quickly
+  // before having to load in the full array of images (which may take several seconds)
+  // -this dramatically improves the responsiveness of the web page.
+
+  quicklook.src = FilenamesDict[mydiag][ImageNum]
+  document.fraOne.Animation.src = quicklook.src;
+  for (var ifile = 0; ifile < FilenamesDict[mydiag].length; ifile++)
+   {
+   theImages[ifile].src = FilenamesDict[mydiag][ifile];
+   }
+}
+
+// Preload button icon images (so mouseover doesnt slow things down)
+function loadicons()
+{
+  play = new Image();
+  play.src="./icons/play.jpg"
+  play2 = new Image();
+  play2.src="./icons/play2.jpg"
+  stop = new Image();
+  stop.src="./icons/stop.jpg"
+  stop2 = new Image();
+  stop2.src="./icons/stop2.jpg"
+  forward = new Image();
+  forward.src="./icons/forward.jpg"
+  forward2 = new Image();
+  forward2.src="./icons/forward2.jpg"
+  back = new Image();
+  back.src="./icons/back.jpg"
+  back2 = new Image();
+  back2.src="./icons/back2.jpg"
+  faster = new Image();
+  faster.src="./icons/faster.jpg"
+  faster2 = new Image();
+  faster2.src="./icons/faster2.jpg"
+  slower = new Image();
+  slower.src="./icons/slower.jpg"
+  slower2 = new Image();
+  slower2.src="./icons/slower2.jpg"
+}
+// Mouseover effects
+function mouseOver1()
+{
+ document.fraOne.b1.src =play.src;
+}
+function mouseOut1()
+{
+ document.fraOne.b1.src =play2.src;
+}
+function mouseOver2()
+{
+ document.fraOne.b2.src =stop.src;
+}
+function mouseOut2()
+{
+ document.fraOne.b2.src =stop2.src;
+}
+function mouseOver3()
+{
+ document.fraOne.b3.src =slower.src;
+}
+function mouseOut3()
+{
+ document.fraOne.b3.src =slower2.src;
+}
+function mouseOver4()
+{
+ document.fraOne.b4.src =faster.src;
+}
+function mouseOut4()
+{
+ document.fraOne.b4.src =faster2.src;
+}
+function mouseOver5()
+{
+ document.fraOne.b5.src =back.src;
+}
+function mouseOut5()
+{
+ document.fraOne.b5.src =back2.src;
+}
+function mouseOver6()
+{
+ document.fraOne.b6.src =forward.src;
+}
+function mouseOut6()
+{
+ document.fraOne.b6.src =forward2.src;
+}
+// Animate images forward, loop continously
+function Animate()
+{
+  ImageNum++;
+  if(ImageNum > LastImg) ImageNum = FirstImg;
+  document.getElementById("frmFraNum").innerHTML="Frame "+ ImageNum;
+  document.fraOne.Animation.src = theImages[ImageNum].src;
+}
+// Increase Delay by DelayStep while animating
+function Slower()
+{
+  if(StopFlag == 0)
+   {
+    Delay += DelayStep;
+    if(Delay > MaxDelay) Delay = MaxDelay;
+    document.getElementById("frmDelayMS").innerHTML= Delay + " ms";
+   }
+}
+// Decrease Delay by DelayStep while animating
+function Faster()
+{
+  if(StopFlag == 0)
+   {
+    Delay -= DelayStep;
+    if(Delay < MinDelay) Delay = MinDelay;
+    document.getElementById("frmDelayMS").innerHTML= Delay + " ms";
+   }
+}
+// Step image back one while not animating
+function StepBck()
+{
+  if(StopFlag == 1)
+   {
+    ImageNum--;
+    if(ImageNum < FirstImg) ImageNum = LastImg;
+    document.fraOne.Animation.src = theImages[ImageNum].src;
+    document.getElementById("frmFraNum").innerHTML="Frame "+ ImageNum;
+   }
+}
+// Step image forward one while not animating
+function StepFwd()
+{
+  if(StopFlag == 1)
+   {
+    ImageNum++;
+    if(ImageNum > LastImg) ImageNum = FirstImg;
+    document.fraOne.Animation.src = theImages[ImageNum].src;
+    document.getElementById("frmFraNum").innerHTML="Frame "+ ImageNum;
+   }
+}
+// Start (or restart) animation
+function Start()
+{
+  if (StopFlag == 1)
+  {
+    StopFlag = 0;
+    document.getElementById("frmAnimStatus").innerHTML="Running";
+    timerID=setTimeout('Animate()', Delay);
+  }
+}
+// Stop animation
+function Stop()
+{
+  if (StopFlag == 0)
+   {
+    StopFlag = 1;
+    document.getElementById("frmAnimStatus").innerHTML="Stopped";
+   }
+}
+// Change diagnostic: adjust filename tag used.
+function getDiag()
+{
+	o = document.myselections.diag.options;
+	i = o[o.selectedIndex].value;
+	mydiag = tag[i];
+        ImageNum=0
+        LastImg=FilenamesDict[mydiag].length-1
+        maxImg=FilenamesDict[mydiag].length
+        if ( maxImg > 10 ){
+          Delay=200
+        } else {
+          Delay=500
+        }
+        document.getElementById("frmDelayMS").innerHTML= Delay + " ms";
+        loadimgs();
+	return mydiag;
+}
+</SCRIPT>
+
+</SCRIPT>
+
+
+<div class="container-wide">
+<div class="content">
+<CENTER><form align=center name="myselections">
+<SELECT NAME="diag" ONCLICK="mydiag=getDiag()" SIZE=1>
+
+<!--  End of first part for use in contour browser
+**************************************************************
+-->
+
+<-- List of options for drop-down selection-->
+<OPTION value="0" SELECTED>O3</OPTION>
+
+<!--
+************************************************************
+Second part of fixed text for contour browser
+-->
+
+</SELECT>
+</form></CENTER>
+<form name="fraOne">
+<TABLE WIDTH=40% ALIGN=center>
+<TR>
+<TD>
+&nbsp;&nbsp;<A ID="frmAnimStatus">Running</A>
+</TD>
+<TD>
+&nbsp;&nbsp;&nbsp;&nbsp;<A ID="frmDelayMS">200ms</A>
+</TD>
+<TD>
+&nbsp;&nbsp;<A ID="frmFraNum">Frame 0</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<A HREF="javascript:Start()" onmouseover="javascript:mouseOver1()" onmouseout="javascript:mouseOut1()"><IMG NAME="b1" SRC="./icons/play2.jpg" BORDER=0></A>&nbsp;
+<A HREF="javascript:Stop()" onmouseover="javascript:mouseOver2()" onmouseout="javascript:mouseOut2()"><IMG NAME="b2" SRC="./icons/stop2.jpg" BORDER=0></A>&nbsp;
+</TD>
+<TD>
+<A HREF="javascript:Slower()" onmouseover="javascript:mouseOver3()" onmouseout="javascript:mouseOut3()"><IMG NAME="b3" SRC="./icons/slower2.jpg" BORDER=0></A>&nbsp;
+<A HREF="javascript:Faster()" onmouseover="javascript:mouseOver4()" onmouseout="javascript:mouseOut4()"><IMG NAME="b4" SRC="./icons/faster2.jpg" BORDER=0></A>&nbsp;
+</TD>
+<TD>
+<A HREF="javascript:StepBck()" onmouseover="javascript:mouseOver5()" onmouseout="javascript:mouseOut5()"><IMG NAME="b5" SRC="./icons/back2.jpg" BORDER=0></A>&nbsp;
+<A HREF="javascript:StepFwd()" onmouseover="javascript:mouseOver6()" onmouseout="javascript:mouseOut6()"><IMG NAME="b6" SRC="./icons/forward2.jpg" BORDER=0></A>&nbsp;
+</TD>
+</TR>
+</TABLE>
+<table align=center width=35%>
+<tr><td>
+<img name="Animation" colspan=10 onLoad="if(StopFlag == 0) timerID=setTimeout('Animate()', Delay)"  src="./icons/spacer.gif">
+</td>
+</tr>
+<script type="text/javascript">
+//reset values on selection options as otherwise on refresh, old values will be displayed
+document.myselections.diag[0].selected=true;
+</script>
+<DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;"></DIV>
+</table>
+</form>
+</div>
+</div>
+
+<!--
+End of Second part of fixed text for contour browser
+**************************************************************
+-->
+
+<p><hr><p>
+<font color="#990000"> WARNING: This page is not supported operationally.</font>
+<br><I>Modified:</I> <B><!--#config timefmt="%d %b %Y"--><!--#echo var="LAST_MODIFIED"--> </B>
+<p><hr><p>
+<address>
+</address>
+</body>
+</html>

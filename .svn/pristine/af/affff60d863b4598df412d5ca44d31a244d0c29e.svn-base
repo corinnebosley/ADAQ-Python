@@ -1,0 +1,31 @@
+# retrieve_aurn.ini
+# Configuration file for retrieve_aurn.py
+
+#   Blank lines and those beginning with '#' ignored
+#   Comma seperate lists
+#   Any variables set in config.py are also expanded:
+#    - SAMPLE_DATADIR
+#
+#   This file should contain a quick-to-run example which will test full functionality
+
+#--------------
+# Dates - nb only 2 of range_days, start_date and end_date need to be given
+
+#Number of days to plot
+#range_days           = 1
+
+#Start and end date (yyyymmdd) - this will be 00Z on this date
+start_date	     = 20170601
+end_date         = 20170603
+
+#-------------
+# Other
+#List of species to include (eg  ["O3","NO2","NO","CO","PM10","PM2p5","C5H8"] )
+short_name_list      = ["O3","PM2p5"] 
+
+#Filename of file contain information about site locations
+# e.g. in ADAQ Python: CODE_DIR/adaqscripts/aq_sites_all.txt
+sites_file           = "SAMPLE_DATADIR/AURN_obs/aq_sites_NewClass_short.txt"
+
+#Top level location of observations
+obs_dir = "$DATADIR/ADAQ_python/AURN_obs"

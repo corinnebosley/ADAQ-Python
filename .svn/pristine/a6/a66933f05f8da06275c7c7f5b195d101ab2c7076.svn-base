@@ -1,0 +1,16 @@
+#!/bin/ksh
+# Script to run PlumeandMet.py
+
+
+python <<EOF
+import PlumeandMet
+
+workdir = '/project/NAME/apnm/NAMEIIIout/PythonHackathon/DataFiles/Fields_grid1'
+metDir = '/project/NAME/apnm/NAMEIIIout/PythonHackathon/DataFiles/Fields_grid3'
+
+
+
+
+PlumeandMet.PlumeandMet(workdir, metDir)
+
+EOF

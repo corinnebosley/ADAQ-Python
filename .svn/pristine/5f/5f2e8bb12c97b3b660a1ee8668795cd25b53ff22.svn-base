@@ -1,0 +1,172 @@
+Statistics for Tue 25-Mar-2014 23:00 - Mon 31-Mar-2014 00:00,,,
+     Phenomemon,           Statistic,aqum_oper,aqum_casestudy
+
+            NO2,              nsites,         4,         4
+            NO2,                npts,       483,       483
+            NO2,         correlation,      0.37,      0.51
+            NO2,        bias (ug/m3),      5.60,     -1.16
+            NO2,                 nmb,      0.40,     -0.08
+            NO2,                mnmb,      0.31,      0.02
+            NO2,                nmge,      0.86,      0.50
+            NO2,                 fge,      0.66,      0.54
+            NO2,        rmse (ug/m3),     18.76,     11.89
+            NO2,                fac2,      0.58,      0.68
+            NO2,                 ioa,      0.36,      0.63
+            NO2,   threshold (ug/m3),      None,      None
+            NO2,          odds_ratio,      None,      None
+            NO2,                orss,      None,      None
+            NO2,             hitrate,      None,      None
+            NO2,      falsealarmrate,      None,      None
+            NO2,     falsealarmratio,      None,      None
+            NO2,           o>=t_m>=t,      None,      None
+            NO2,            o<t_m>=t,      None,      None
+            NO2,            o>=t_m<t,      None,      None
+            NO2,             o<t_m<t,      None,      None
+            NO2,      maxobs (ug/m3),    100.00,    100.00
+            NO2,      maxmod (ug/m3),  87.03069, 49.608154
+            NO2,     pc95obs (ug/m3),     42.14,     42.14
+            NO2,     pc95mod (ug/m3),     58.95,     32.82
+            NO2,     meanobs (ug/m3),     14.05,     14.05
+            NO2,     meanmod (ug/m3), 19.643263, 12.888467
+            NO2,       sdobs (ug/m3),     13.33,     13.33
+            NO2,       sdmod (ug/m3), 17.854319,  9.705024
+            NO2,    perc_correct (%),      0.00,      0.00
+            NO2,       perc_over (%),     69.57,     50.72
+            NO2,      perc_under (%),     30.43,     49.28
+            NO2,               units,     ug/m3,     ug/m3
+
+             O3,              nsites,         5,         5
+             O3,                npts,       605,       605
+             O3,         correlation,      0.58,      0.63
+             O3,        bias (ug/m3),     -3.41,      5.32
+             O3,                 nmb,     -0.05,      0.08
+             O3,                mnmb,     -0.09,      0.09
+             O3,                nmge,      0.22,      0.19
+             O3,                 fge,      0.29,      0.22
+             O3,        rmse (ug/m3),     19.95,     17.21
+             O3,                fac2,      0.88,      0.94
+             O3,                 ioa,      0.54,      0.60
+             O3,   threshold (ug/m3),      None,      None
+             O3,          odds_ratio,      None,      None
+             O3,                orss,      None,      None
+             O3,             hitrate,      None,      None
+             O3,      falsealarmrate,      None,      None
+             O3,     falsealarmratio,      None,      None
+             O3,           o>=t_m>=t,      None,      None
+             O3,            o<t_m>=t,      None,      None
+             O3,            o>=t_m<t,      None,      None
+             O3,             o<t_m<t,      None,      None
+             O3,      maxobs (ug/m3),    109.00,    109.00
+             O3,      maxmod (ug/m3), 105.04442, 112.26964
+             O3,     pc95obs (ug/m3),     91.00,     91.00
+             O3,     pc95mod (ug/m3),     92.90,     96.42
+             O3,     meanobs (ug/m3),     65.47,     65.47
+             O3,     meanmod (ug/m3),  62.06046, 70.786865
+             O3,       sdobs (ug/m3),     19.65,     19.65
+             O3,       sdmod (ug/m3),  22.73018, 18.582178
+             O3,    perc_correct (%),      0.00,      0.00
+             O3,       perc_over (%),     39.83,     63.31
+             O3,      perc_under (%),     60.17,     36.69
+             O3,               units,     ug/m3,     ug/m3
+
+           PM10,              nsites,         3,         3
+           PM10,                npts,       291,       291
+           PM10,         correlation,      0.55,      0.54
+           PM10,        bias (ug/m3),     -9.66,    -10.02
+           PM10,                 nmb,     -0.38,     -0.39
+           PM10,                mnmb,     -0.46,     -0.50
+           PM10,                nmge,      0.48,      0.49
+           PM10,                 fge,      0.61,      0.64
+           PM10,        rmse (ug/m3),     16.17,     16.56
+           PM10,                fac2,      0.65,      0.63
+           PM10,                 ioa,      0.50,      0.49
+           PM10,   threshold (ug/m3),      None,      None
+           PM10,          odds_ratio,      None,      None
+           PM10,                orss,      None,      None
+           PM10,             hitrate,      None,      None
+           PM10,      falsealarmrate,      None,      None
+           PM10,     falsealarmratio,      None,      None
+           PM10,           o>=t_m>=t,      None,      None
+           PM10,            o<t_m>=t,      None,      None
+           PM10,            o>=t_m<t,      None,      None
+           PM10,             o<t_m<t,      None,      None
+           PM10,      maxobs (ug/m3),     73.00,     73.00
+           PM10,      maxmod (ug/m3), 53.667114, 56.454586
+           PM10,     pc95obs (ug/m3),     52.50,     52.50
+           PM10,     pc95mod (ug/m3),     37.07,     36.85
+           PM10,     meanobs (ug/m3),     25.36,     25.36
+           PM10,     meanmod (ug/m3), 15.707865, 15.346684
+           PM10,       sdobs (ug/m3),     15.25,     15.25
+           PM10,       sdmod (ug/m3), 11.237196, 11.556519
+           PM10,    perc_correct (%),      0.00,      0.00
+           PM10,       perc_over (%),     19.24,     17.18
+           PM10,      perc_under (%),     80.76,     82.82
+           PM10,               units,     ug/m3,     ug/m3
+
+          PM2p5,              nsites,         3,         3
+          PM2p5,                npts,       326,       326
+          PM2p5,         correlation,      0.73,      0.71
+          PM2p5,        bias (ug/m3),     -4.60,     -4.97
+          PM2p5,                 nmb,     -0.24,     -0.26
+          PM2p5,                mnmb,     -0.23,     -0.28
+          PM2p5,                nmge,      0.41,      0.42
+          PM2p5,                 fge,      0.49,      0.52
+          PM2p5,        rmse (ug/m3),     10.94,     11.28
+          PM2p5,                fac2,      0.75,      0.68
+          PM2p5,                 ioa,      0.66,      0.64
+          PM2p5,   threshold (ug/m3),      None,      None
+          PM2p5,          odds_ratio,      None,      None
+          PM2p5,                orss,      None,      None
+          PM2p5,             hitrate,      None,      None
+          PM2p5,      falsealarmrate,      None,      None
+          PM2p5,     falsealarmratio,      None,      None
+          PM2p5,           o>=t_m>=t,      None,      None
+          PM2p5,            o<t_m>=t,      None,      None
+          PM2p5,            o>=t_m<t,      None,      None
+          PM2p5,             o<t_m<t,      None,      None
+          PM2p5,      maxobs (ug/m3),     69.00,     69.00
+          PM2p5,      maxmod (ug/m3),  46.66436,  49.16355
+          PM2p5,     pc95obs (ug/m3),     46.00,     46.00
+          PM2p5,     pc95mod (ug/m3),     35.95,     36.59
+          PM2p5,     meanobs (ug/m3),     19.09,     19.09
+          PM2p5,     meanmod (ug/m3), 14.490547, 14.120522
+          PM2p5,       sdobs (ug/m3),     14.45,     14.45
+          PM2p5,       sdmod (ug/m3), 10.516014, 10.800966
+          PM2p5,    perc_correct (%),      0.00,      0.00
+          PM2p5,       perc_over (%),     28.22,     27.30
+          PM2p5,      perc_under (%),     71.78,     72.70
+          PM2p5,               units,     ug/m3,     ug/m3
+
+            SO2,              nsites,         1,         1
+            SO2,                npts,       121,       121
+            SO2,         correlation,      0.27,      0.33
+            SO2,        bias (ug/m3),      3.01,      2.47
+            SO2,                 nmb,      2.88,      2.36
+            SO2,                mnmb,      1.20,      1.07
+            SO2,                nmge,      2.88,      2.36
+            SO2,                 fge,      1.20,      1.07
+            SO2,        rmse (ug/m3),      3.28,      2.96
+            SO2,                fac2,      0.12,      0.21
+            SO2,                 ioa,     -0.66,     -0.58
+            SO2,   threshold (ug/m3),      None,      None
+            SO2,          odds_ratio,      None,      None
+            SO2,                orss,      None,      None
+            SO2,             hitrate,      None,      None
+            SO2,      falsealarmrate,      None,      None
+            SO2,     falsealarmratio,      None,      None
+            SO2,           o>=t_m>=t,      None,      None
+            SO2,            o<t_m>=t,      None,      None
+            SO2,            o>=t_m<t,      None,      None
+            SO2,             o<t_m<t,      None,      None
+            SO2,      maxobs (ug/m3),      3.00,      3.00
+            SO2,      maxmod (ug/m3),  7.754634, 8.3653145
+            SO2,     pc95obs (ug/m3),      2.30,      2.30
+            SO2,     pc95mod (ug/m3),      6.24,      6.84
+            SO2,     meanobs (ug/m3),      1.05,      1.05
+            SO2,     meanmod (ug/m3), 4.0516853, 3.5144954
+            SO2,       sdobs (ug/m3),      0.65,      0.65
+            SO2,       sdmod (ug/m3),  1.340898, 1.7353594
+            SO2,    perc_correct (%),      0.00,      0.00
+            SO2,       perc_over (%),    100.00,    100.00
+            SO2,      perc_under (%),      0.00,      0.00
+            SO2,               units,     ug/m3,     ug/m3

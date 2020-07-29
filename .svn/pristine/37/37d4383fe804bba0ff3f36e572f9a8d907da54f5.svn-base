@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>AQ plot timeseries</title>
+</head>
+<body>
+
+
+<h1>AQ plot timeseries for 20140402 - 20140403</h1>
+
+
+<h2>Timeseries</h2>
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td><a href="plots/timeseries//Aberdeen_O3.png"><img width=500 src="plots/timeseries//Aberdeen_O3.png"> </a></td>
+</tr>
+<tr>
+</tr>
+<tr>
+</tr>
+<tr>
+</tr>
+<tr>
+</tr>
+</table>
+
+<p><hr><p>
+<font color="#990000"> WARNING: This page is not supported operationally.</font>
+<br><I>Modified:</I> <B><!--#config timefmt="%d %b %Y"--><!--#echo var="LAST_MODIFIED"--> </B>
+<p><hr><p>
+<address>
+</address>
+</body>
+</html>

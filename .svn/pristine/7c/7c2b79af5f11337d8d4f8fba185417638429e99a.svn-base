@@ -1,0 +1,54 @@
+<!--
+************************************************************
+Second part of fixed text for contour browser
+-->
+
+</SELECT>
+</form></CENTER>
+<form name="fraOne">
+<TABLE WIDTH=40% ALIGN=center>
+<TR>
+<TD>
+&nbsp;&nbsp;<A ID="frmAnimStatus">Running</A>
+</TD>
+<TD>
+&nbsp;&nbsp;&nbsp;&nbsp;<A ID="frmDelayMS">200ms</A>
+</TD>
+<TD>
+&nbsp;&nbsp;<A ID="frmFraNum">Frame 0</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<A HREF="javascript:Start()" onmouseover="javascript:mouseOver1()" onmouseout="javascript:mouseOut1()"><IMG NAME="b1" SRC="./icons/play2.jpg" BORDER=0></A>&nbsp;
+<A HREF="javascript:Stop()" onmouseover="javascript:mouseOver2()" onmouseout="javascript:mouseOut2()"><IMG NAME="b2" SRC="./icons/stop2.jpg" BORDER=0></A>&nbsp;
+</TD>
+<TD>
+<A HREF="javascript:Slower()" onmouseover="javascript:mouseOver3()" onmouseout="javascript:mouseOut3()"><IMG NAME="b3" SRC="./icons/slower2.jpg" BORDER=0></A>&nbsp;
+<A HREF="javascript:Faster()" onmouseover="javascript:mouseOver4()" onmouseout="javascript:mouseOut4()"><IMG NAME="b4" SRC="./icons/faster2.jpg" BORDER=0></A>&nbsp;
+</TD>
+<TD>
+<A HREF="javascript:StepBck()" onmouseover="javascript:mouseOver5()" onmouseout="javascript:mouseOut5()"><IMG NAME="b5" SRC="./icons/back2.jpg" BORDER=0></A>&nbsp;
+<A HREF="javascript:StepFwd()" onmouseover="javascript:mouseOver6()" onmouseout="javascript:mouseOut6()"><IMG NAME="b6" SRC="./icons/forward2.jpg" BORDER=0></A>&nbsp;
+</TD>
+</TR>
+</TABLE>
+<table align=center width=35%>
+<tr><td>
+<img name="Animation" colspan=10 onLoad="if(StopFlag == 0) timerID=setTimeout('Animate()', Delay)"  src="./icons/spacer.gif">
+</td>
+</tr>
+<script type="text/javascript">
+//reset values on selection options as otherwise on refresh, old values will be displayed
+document.myselections.diag[0].selected=true;
+</script>
+<DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;"></DIV>
+</table>
+</form>
+</div>
+</div>
+
+<!--
+End of Second part of fixed text for contour browser
+**************************************************************
+-->
